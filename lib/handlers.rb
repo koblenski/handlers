@@ -1,4 +1,5 @@
 require "action_view/template"
+require "handlers/railtie"
 
 ActionView::Template.register_template_handler :rb, lambda { |template| template.source }
 ActionView::Template.register_template_handler :string, lambda { |template| "%Q{#{template.source}}" }
